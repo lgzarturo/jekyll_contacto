@@ -1,0 +1,51 @@
+<div class="container">
+    <hr>
+    <footer>
+        <p class="pull-right"><a href="#"><i class="fa fa-arrow-circle-up" aria-hidden="true"></i>&nbsp;Ir Arriba</a></p>
+        <p><i class="fa fa-copyright" aria-hidden="true"></i> 2016 <a href="http://famisoft.com" target="_blank">Famisoft.com</a> &middot;
+            <a href="http://famisoft.com/politica-de-privacidad/" target="_blank">Aviso de Privacidad</a> &middot;
+            <a href="http://famisoft.com/condiciones-del-servicio-famisoft/" target="_blank">Términos y Condiciones</a>
+        </p>
+    </footer>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id={{ site.tag_manager }}"
+                      height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+</div> <!-- /container -->
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v2.8&appId=259964954390158";
+    fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<script type="application/ld+json">
+{ "@context" : "http://schema.org",
+  "@type" : "Organization",
+  "url" : "{{ site.url }}",
+  "sameAs" : [
+	  "https://www.linkedin.com/in/{{ site.linkedin_username }}",
+	  "https://github.com/{{ site.github_username }}",
+	  "https://twitter.com/{{ site.twitter_username }}",
+	  "{{site.facebook_url }}",
+	  "{{ site.googleplus_url }}"
+  ]
+}
+</script>
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+<![endif]-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+<script src="https://use.fontawesome.com/e1fbbec973.js"></script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','{{ site.tag_manager }}');</script>
+<!-- End Google Tag Manager -->

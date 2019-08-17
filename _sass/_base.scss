@@ -1,0 +1,267 @@
+/**
+ * Reset some basic elements
+ */
+body, h1, h2, h3, h4, h5, h6,
+p, blockquote, pre, hr,
+dl, dd, ol, ul, figure {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  color: #3e3e3e;
+  font: normal 22px/1.4 $base-font-family;
+}
+
+/**
+ * Basic styling
+ */
+body {
+  font: $base-font-weight #{$base-font-size}/#{$base-line-height} $base-font-family;
+  color: $text-color;
+  background-color: $background-color;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-feature-settings: "kern" 1;
+  -moz-font-feature-settings: "kern" 1;
+  -o-font-feature-settings: "kern" 1;
+  font-feature-settings: "kern" 1;
+  font-kerning: normal;
+}
+
+::selection {
+  background: $brand-color;
+  color: #fff;
+}
+
+/**
+ * Set `margin-bottom` to maintain vertical rhythm
+ */
+h1, h2, h3, h4, h5, h6,
+p, blockquote, pre,
+ul, ol, dl, figure,
+%vertical-rhythm {
+  margin-bottom: $spacing-unit / 2;
+}
+
+figcaption {
+  font-size: $small-font-size;
+}
+
+/**
+ * Lists
+ */
+ul, ol {
+  margin-left: $spacing-unit;
+}
+
+li {
+  > ul,
+  > ol {
+    margin-bottom: 0;
+  }
+}
+
+/**
+ * Headings
+ */
+h1, h2, h3, h4, h5, h6 {
+  font-family: $title-font-family;
+  font-weight: $title-font-weight;
+  letter-spacing: -.1rem;
+}
+
+h2 {
+  font-size: 190%;
+}
+
+h3 {
+  font-size: 170%;
+}
+
+h4 {
+  font-size: 150%;
+}
+
+h5 {
+  font-size: 130%;
+}
+
+h6 {
+  font-size: 110%;
+}
+
+/**
+ * Links
+ */
+a {
+  color: $brand-color;
+  text-decoration: none;
+
+  &:visited {
+    color: lighten($link-visited-color, 10%);
+    text-decoration: underline;
+  }
+
+  &:hover {
+    color: lighten($brand-color, 10%);
+    text-decoration: underline;
+  }
+}
+
+/**
+ * Blockquotes
+ */
+blockquote {
+  color: $grey-color;
+  background-color: lighten($grey-color-light, 4%);
+  border-left: 4px solid $grey-color-light;
+  padding-left: $spacing-unit / 2;
+  padding-top: 1.4em;
+  padding-bottom: 1.4em;
+  margin: 1.6em 0;
+  font-size: 20px;
+  letter-spacing: -1px;
+  font-style: italic;
+
+  > :last-child {
+    margin-bottom: 0;
+  }
+}
+
+hr {
+  margin: 1em 0;
+}
+
+/**
+ * Code formatting
+ */
+pre,
+code {
+  font-size: 15px;
+  border: 1px solid $grey-color-light;
+  border-radius: 3px;
+  background-color: #eef;
+}
+
+code {
+  padding: 1px 5px;
+}
+
+pre {
+  padding: 8px 12px;
+  overflow-x: auto;
+
+  > code {
+    border: 0;
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
+
+/**
+ * Clearfix
+ */
+%clearfix {
+
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+.btn-primary:visited, .btn-success:visited, .btn-warning:visited, .btn-info:visited, .btn-danger:visited {
+  color: #fff;
+}
+
+.btn-contacto, .btn-contacto:visited {
+  background-color: $button-color;
+  color: #fff;
+  font-weight: bold;
+}
+
+.btn-contacto:hover {
+  background-color: $button-color-hover;
+}
+
+.text-color-btn {
+  color: $button-color;
+}
+
+.company--info {
+  h1, h2, h3 {
+    padding-bottom: 9px;
+    margin: 40px 0 20px;
+    border-bottom: 1px solid #eee;
+  }
+}
+
+.more--info {
+  cursor: pointer;
+  border-bottom: 1px dashed silver;
+}
+
+.next-section {
+  background-color: $brand-color;
+  color: #fff;
+  display: block;
+  position: relative;
+  overflow: hidden;
+  padding: 0 !important;
+  margin: 2em 0;
+
+  .footer--next-section {
+    position: absolute;
+    background-size: 20% auto;
+    opacity: 0.075;
+    background: url("/assets/img/bg-section-icons.png") repeat center;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.link--next-section {
+  display: block;
+  padding: 3em 0;
+  color: #fff;
+}
+
+.link--next-section:hover, .link--next-section:visited {
+  color: #fff;
+  text-decoration: none;
+  z-index: 20;
+}
+
+.heading--next-section {
+  font-size: 2em;
+  display: block;
+  font-family: "Vollkorn", Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  margin-bottom: .5em;
+}
+
+.content--next-section {
+  padding-right: 10%;
+  display: block;
+}
+
+.icon--next-section {
+  position: absolute;
+  font-size: 10em !important;
+  top: 5%;
+  right: 0;
+}
+
+.media--blog {
+  margin: 2em 0 !important;
+}
+
+.link-pages a {
+  font-size: .8em;
+}
+
+.navbar-brand {
+  padding: 5px 5px !important;
+}

@@ -1,0 +1,72 @@
+---
+layout: default
+---
+<script type="application/ld+json">
+{
+	"@context": "http://schema.org",
+    "@type": "BlogPosting",
+    "headline": "{{ page.title }}",
+    "datePublished": "{{ page.date | date_to_xmlschema }}",
+    "description": "{{ page.resume }}"
+}
+</script>
+<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+<div class="jumbotron">
+    <div class="container">
+        <h1 itemprop="name headline">{{ page.title }}</h1>
+        <div class="post-content" itemprop="articleBody">
+            {% if page.resume %}{{ page.resume }}{% endif %}
+        </div>
+        {% if page.comments %}
+        <p class="post-meta">
+            <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
+                {{ page.date | date: "%b %-d, %Y" }}
+            </time>
+            {% if page.author %} •
+            <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <span itemprop="name">{{ page.author }}</span>
+            </span>
+            {% endif %}
+        </p>
+        {% endif %}
+        <div class="fb-save" data-uri="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}" data-size="large"></div>
+        <div class="fb-share-button" data-href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}" data-layout="button_count" data-size="large" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u={{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}&amp;src=sdkpreparse">Compartir</a></div>
+        <div class="fb-send" data-href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}"></div>
+    </div>
+</div>
+
+<div class="container company--info">
+    <div class="row">
+        <div class="col-md-9">
+            {% if page.feature-img %}
+            <img src="{{ page.feature-img }}" alt="{{ page.title }}" class="img-responsive img-rounded">
+            {% endif %}
+            {{ content }}
+        </div>
+        <div class="col-md-3">
+            <div class="list-group link-pages">
+                <a href="/about" class="list-group-item"><i class="fa fa-check fa-fw" aria-hidden="true"></i>&nbsp;Sobre Contacto.top</a>
+                <a href="/presencia-en-internet.html" class="list-group-item"><i class="fa fa-check fa-fw" aria-hidden="true"></i>&nbsp;Crea tu presencia en Internet</a>
+                <a href="/nuestras-herramientas.html" class="list-group-item"><i class="fa fa-check fa-fw" aria-hidden="true"></i>&nbsp;Impresiona a tus visitas</a>
+                <a href="/posicionamos-tu-marca.html" class="list-group-item"><i class="fa fa-check fa-fw" aria-hidden="true"></i>&nbsp;Publicidad digital a la medida</a>
+                <a href="/promocion/marketing/2016/11/11/landing-page-como-crm.html" class="list-group-item"><i class="fa fa-check fa-fw" aria-hidden="true"></i>&nbsp;Páginas de aterrizaje optimizadas</a>
+                <a href="/consultoria/digital/2016/11/12/consultor-sem-y-seo.html" class="list-group-item"><i class="fa fa-check fa-fw" aria-hidden="true"></i>&nbsp;Generamos prospectos para tu negocio</a>
+                <a href="/inbound/marketing/2016/11/13/estrategia-email-marketing-y-redes-sociales.html" class="list-group-item"><i class="fa fa-check fa-fw" aria-hidden="true"></i>&nbsp;Gana visibilidad y reconocimiento</a>
+                <a href="/marketing/seo/2016/12/04/como-hacer-para-aparecer-en-las-busquedas-de-google.html" class="list-group-item"><i class="fa fa-check fa-fw" aria-hidden="true"></i>&nbsp;Aparece en las búsquedas de Google</a>
+            </div>
+
+        </div>
+        {% if page.comments %}
+        <div class="col-md-12">
+            <div class="well">
+                <h4>¡Comparte el conocimiento!</h4>
+                <p>Si te gusto el artículo <strong>ayudame</strong> a compartirlo en redes sociales o deja tu comentario, te lo
+                    agradecere enormemente.</p>
+
+                <div class="fb-comments" data-href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}" data-width="100%" data-numposts="5"></div>
+            </div>
+        </div>
+        {% endif %}
+    </div>
+</div>
+</article>

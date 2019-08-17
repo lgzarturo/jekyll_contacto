@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+
+<head>
+    {% include head.html %}
+    <link rel="stylesheet" href="{{ "/css/carousel.css" | prepend: site.baseurl }}">
+</head>
+
+<body>
+
+<div class="navbar-wrapper">
+    <div class="container">
+
+        <nav class="navbar navbar-inverse navbar-static-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                        <span class="sr-only">Menú</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="/">
+                        <img src="/assets/img/logo-contacto-top.png" alt="Contacto.top">
+                    </a>
+                </div>
+                <div id="navbar" class="navbar-collapse collapse navbar-right">
+                    <ul class="nav navbar-nav">
+                        <li><a href="/about">Nosotros</a></li>
+                        <li><a href="/blog">Blog</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+    </div>
+</div>
+
+
+<!-- Carousel
+================================================== -->
+<div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner" role="listbox">
+        <div class="item active" style="background: url('/assets/img/contacto-top-landing-crm.jpg') no-repeat top center; background-size: cover;">
+            <div class="container">
+                <div class="carousel-caption">
+                    <h1>Landing Page CRM</h1>
+                    <p>
+                        Creamos páginas de aterrizaje medibles, optimizadas y enfocadas en generar prospectos para tu negocio.
+                    </p>
+                    <p><a class="btn btn-lg btn-contacto" href="promocion/marketing/2016/11/11/landing-page-como-crm.html" role="button">Más Información</a></p>
+                </div>
+            </div>
+        </div>
+        <div class="item" style="background: url('/assets/img/contacto-top-seo-sem.jpg') no-repeat top center; background-size: cover;">
+            <div class="container">
+                <div class="carousel-caption">
+                    <h1>SEM &amp; SEO</h1>
+                    <p>
+                        Auditorias web para mejorar la optimización de tu sitio web, obtén más resultados de la publicidad digital.
+                    </p>
+                    <p><a class="btn btn-lg btn-contacto" href="/consultoria/digital/2016/11/12/consultor-sem-y-seo.html" role="button">Más Información</a></p>
+                </div>
+            </div>
+        </div>
+        <div class="item" style="background: url('/assets/img/contacto-top-emailing-redes-sociales.jpg') no-repeat top center; background-size: cover;">
+            <div class="container">
+                <div class="carousel-caption">
+                    <h1>E-Mailing &amp; Redes Sociales</h1>
+                    <p>
+                        Conecta con tus clientes, creamos tu presencia online para que ganes visibilidad y reconocimiento de marca.
+                    </p>
+                    <p><a class="btn btn-lg btn-contacto" href="/inbound/marketing/2016/11/13/estrategia-email-marketing-y-redes-sociales.html" role="button">Más Información</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+        <span class="sr-only">Anterior</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        <span class="sr-only">Siguiente</span>
+    </a>
+</div><!-- /.carousel -->
+
+{{ content }}
+
+<!-- FOOTER -->
+{% include footer.html %}
+
+{% include modal.html %}
+</body>
+
+</html>
